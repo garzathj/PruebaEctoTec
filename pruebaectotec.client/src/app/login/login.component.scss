@@ -1,0 +1,60 @@
+#main {
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+  height: 40vh;
+  width: 30vw;
+  border: 5px solid black;
+  margin-top: 10vh;
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: lightblue;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 32% 32% 36%;
+  width: 100%;
+}
+
+label {
+  align-self: center;
+  justify-self: self-end;
+  font-weight: bold;
+}
+
+input {
+  height: 4vh;
+  width: 16vw;
+  margin-left: 1vw;
+  justify-self: self-start;
+  align-self: center;
+}
+
+.inputError {
+  border: red 1px solid;
+}
+
+.btnLogin {
+  height: 6vh;
+  width: 20vh;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 1vh;
+  grid-row: 3;
+  grid-column: 1 / 3;
+  align-self: center;
+  justify-self: center;
+}

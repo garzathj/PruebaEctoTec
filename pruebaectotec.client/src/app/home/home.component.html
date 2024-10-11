@@ -1,0 +1,79 @@
+<main id="main">
+  <h2>Projects</h2>
+
+  <section id="menu">
+    <button type="button" class="menuBtn" (click)="menuChange(menuOptions.projectsList)"
+            [ngClass]="menuValue === menuOptions.projectsList ? 'selected' : ''">
+      Proyectos
+    </button>
+    <button type="button" class="menuBtn" (click)="menuChange(menuOptions.newProject)"
+            [ngClass]="menuValue === menuOptions.newProject ? 'selected' : ''">
+      Crear Proyecto
+    </button>
+    <button type="button" class="menuBtn disabled"
+            [ngClass]="menuValue === menuOptions.updateProject ? 'selected' : ''">
+      Actualizar Proyecto
+    </button>
+  </section>
+
+  <div *ngIf="menuValue === menuOptions.projectsList">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre de Projecto</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project of projects">
+          <td>{{ project.name }}</td>
+          <td class="tdUpdate">
+            <button class="btnDelete" (click)="updateProject(project)">
+              EDITAR
+            </button>
+          </td>
+          <td class="tdDelete">
+            <button class="btnDelete" (click)="deleteProject(project)">
+              ELIMINAR
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="menuValue === menuOptions.newProject" class="createContent">
+    <form [formGroup]="createProjectForm" (ngSubmit)="submit()">
+      <div>
+        <label>Nombre Projecto: </label>
+        <input type="text" formControlName="name">
+        <!--<span class="text-danger"
+              *ngIf="(registerFormControl.name.touched || submitted) && registerFormControl.name.errors?.required">
+          Name is required
+        </span>-->
+      </div>
+      <br />
+      <button type="submit" class="btn" [disabled]="!createProjectForm.valid">CREAR</button>
+    </form>
+  </div>
+
+  <div *ngIf="menuValue === menuOptions.updateProject" class="createContent">
+    <form [formGroup]="createProjectForm" (ngSubmit)="update()">
+      <span style="font-weight: bold;">Nombre Actual: {{ projectNameToUpdate }}</span>
+      <div style="margin-top: 2vh;">
+        <label>Nombre Projecto: </label>
+        <input type="text" formControlName="name">
+      </div>
+      <br />
+      <button type="submit" class="btn" [disabled]="!createProjectForm.valid">ACTUALIZAR</button>
+    </form>
+  </div>
+
+  <br />
+  <div *ngIf="menuValue === menuOptions.projectsList">
+    <button class="btnLogout" (click)="logout()">
+      CERRAR SESIÓN
+    </button>
+  </div>
+</main>

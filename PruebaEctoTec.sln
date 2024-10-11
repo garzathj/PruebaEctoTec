@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaEctoTec.Server", "PruebaEctoTec.Server\PruebaEctoTec.Server.csproj", "{79CCACF1-530A-4733-BC2A-54D140DD2165}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "pruebaectotec.client", "pruebaectotec.client\pruebaectotec.client.esproj", "{91775EBC-052B-4CC5-85CE-D9B2780C3C83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79CCACF1-530A-4733-BC2A-54D140DD2165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79CCACF1-530A-4733-BC2A-54D140DD2165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79CCACF1-530A-4733-BC2A-54D140DD2165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79CCACF1-530A-4733-BC2A-54D140DD2165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91775EBC-052B-4CC5-85CE-D9B2780C3C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91775EBC-052B-4CC5-85CE-D9B2780C3C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91775EBC-052B-4CC5-85CE-D9B2780C3C83}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{91775EBC-052B-4CC5-85CE-D9B2780C3C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91775EBC-052B-4CC5-85CE-D9B2780C3C83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91775EBC-052B-4CC5-85CE-D9B2780C3C83}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2718FB11-2AF9-488D-A289-2E43803910AC}
+	EndGlobalSection
+EndGlobal

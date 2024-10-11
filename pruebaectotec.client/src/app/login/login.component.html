@@ -1,0 +1,19 @@
+<main id="main">
+  <section class="login">
+    <div class="title">
+      <span>Iniciar Sesión</span>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+
+      <label style="grid-row: 1; grid-column: 1;">Usuario: </label>
+      <input style="grid-row: 1; grid-column: 2;" type="text" formControlName="username"
+             [ngClass]="!loginForm.get('username').valid ? 'inputError' : ''">
+
+      <label style="grid-row:2; grid-column: 1;">Contraseña:</label>
+      <input type="password" formControlName="password"
+             [ngClass]="!loginForm.get('password').valid ? 'inputError' : ''">
+
+      <button type="submit" class="btnLogin" [disabled]="!loginForm.valid">INICIAR SESIÓN</button>
+    </form>
+  </section>
+</main>

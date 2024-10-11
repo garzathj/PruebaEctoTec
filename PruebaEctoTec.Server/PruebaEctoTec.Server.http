@@ -1,0 +1,6 @@
+@PruebaEctoTec.Server_HostAddress = http://localhost:5299
+
+GET {{PruebaEctoTec.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
